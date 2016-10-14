@@ -47,10 +47,11 @@
 		<url>${github.url}</url>
 		<tag>${project.artifactId}-${project.version}</tag>
 	</scm>
+	<!-- More info about uploading to bintray here: https://bintray.com/docs/usermanual/formats/formats_mavenrepositories.html -->
 	<distributionManagement>
 		<repository>
 			<id>bintray</id>
-			<url>https://api.bintray.com/maven/${bintray.user}/${bintray.repo}/${bintray.package}</url>
+			<url>https://api.bintray.com/maven/${bintray.user}/${bintray.repo}/${bintray.package}/;publish=1</url>
 		</repository>
 	</distributionManagement>
 	<issueManagement>

@@ -69,7 +69,7 @@ Release
 To release to http://bintray.com you must first "Add New Repository" as `maven` then "Add New Package" as `libstemmer`.
 Next you can deploy new release with:
 ```mvn source:jar javadoc:jar deploy```
-After one "Publish" from bintray the artifacts should be available at https://dl.bintray.com/raisercostin/maven/org/tartarus/snowball/libstemmer/1.0.0/ .
+After the automatic publish the artifacts should be available at https://dl.bintray.com/raisercostin/maven/org/tartarus/snowball/libstemmer/1.0.0/ .
 If one makes a request to be included in JCentral they would be available at http://jcenter.bintray.com/org/tartarus/snowball/libstemmer/
 
 
