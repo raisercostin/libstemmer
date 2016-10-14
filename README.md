@@ -34,8 +34,8 @@ And add it to your dependencies list in `pom.xml`:
 ```
 <repositories>
   <repository>
-    <id>org.raisercostin.public.releases</id>
-    <url>http://raisercostin.googlecode.com/svn/maven2</url>
+    <id>jcenter</id>
+    <url>https://jcenter.bintray.com</url>
     <snapshots>
       <enabled>false</enabled>
     </snapshots>
@@ -63,7 +63,16 @@ I'm
 like
 libstemm
 ```
-  
+
+Release
+------
+To release to http://bintray.com you must first "Add New Repository" as `maven` then "Add New Package" as `libstemmer`.
+Next you can deploy new release with:
+```mvn source:jar javadoc:jar deploy```
+After one "Publish" from bintray the artifacts should be available at https://dl.bintray.com/raisercostin/maven/org/tartarus/snowball/libstemmer/1.0.0/ .
+If one makes a request to be included in JCentral they would be available at http://jcenter.bintray.com/org/tartarus/snowball/libstemmer/
+
+
 License
 -------
 

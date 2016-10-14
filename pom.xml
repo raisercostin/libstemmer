@@ -5,15 +5,58 @@
     <artifactId>libstemmer</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
-    <name>${project.artifactId} ${project.version}</name>
-    <url>http://snowball.tartarus.org</url>
-
+    <name>${project.artifactId}-${project.version}</name>
+    
     <properties>
         <encoding>UTF-8</encoding>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
-    </properties>
-
+	   <github.user>raisercostin</github.user>
+	   <github.repo>${artifactId}</github.repo>
+	   <github.url>https://github.com/${github.user}/${github.repo}</github.url>
+	   <bintray.user>${github.user}</bintray.user>
+	   <bintray.repo>maven</bintray.repo>
+	   <bintray.package>${github.repo}</bintray.package>
+   </properties>
+	<url>${github.url}</url>
+	<description>
+		Other urls:
+		- http://snowball.tartarus.org
+	</description>
+	<licenses>
+		<license>
+			<name>BSD License</name>
+			<url>http://www.opensource.org/licenses/bsd-license.html</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Abhinav Ajgaonkar</name>
+			<organizationUrl>http://blog.abhinav.ca/</organizationUrl>
+		</developer>
+		<developer>
+			<name>Costin Grigore</name>
+			<email>raisercostin@gmail.com</email>
+			<organization>raisercostin</organization>
+			<organizationUrl>http://raisercostin.org</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:${github.url}.git</connection>
+		<developerConnection>scm:git:${github.url}.git</developerConnection>
+		<url>${github.url}</url>
+		<tag>${project.artifactId}-${project.version}</tag>
+	</scm>
+	<distributionManagement>
+		<repository>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/${bintray.user}/${bintray.repo}/${bintray.package}</url>
+		</repository>
+	</distributionManagement>
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/raisercostin/${project.artifactId}/issues</url>
+	</issueManagement>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
